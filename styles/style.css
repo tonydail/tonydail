@@ -1,3 +1,14 @@
+:root {
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --html-color: #e34c26;
+  --css-color: #264de4;
+  --js-color: #f7df1e;
+  --react-color: #61dafb;
+  --node-color: #6cc24a;
+  --python-color: #3776ab;
+}
 html {
   height: 100%;
 }
@@ -56,4 +67,59 @@ h1 {
 .page-content {
   font-size: 1.5rem;
   color: #333;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.skill-card span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Brand Colors for Icons */
+.html-icon {
+  color: var(--html-color);
+}
+.css-icon {
+  color: var(--css-color);
+}
+.js-icon {
+  color: var(--js-color);
+}
+.react-icon {
+  color: var(--react-color);
+}
+.node-icon {
+  color: var(--node-color);
+}
+.python-icon {
+  color: var(--python-color);
 }
