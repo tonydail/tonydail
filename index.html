@@ -1,21 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio Landing Page</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; }
-        h1 { color: #333; }
-        .project-link { display: block; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #0366d6; }
-        .project-link:hover { background-color: #f6f8fa; }
-    </style>
-</head>
-<body>
-    <h1>Welcome to Tony Dail's profile page</h1>
-    <p>Click the links below to view my live GitHub repositories:</p>
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row p-5 d-flex">
+        <div class="col-sm-5 text-start">
+          <p class="color-primary display-3">Hello, I am</p>
+          <p class="display-3">Tony Dail</p>
+          <p class="color-secondary display-3">Full Stack Developer</p>
+        </div>
+        <div
+          class="col-sm-7 text-center d-flex align-items-center justify-content-end"
+        >
+          <img
+            src="images/tonydail.jpg"
+            alt="Tony Dail"
+            class="profile-image"
+          />
+        </div>
+      </div>
+      <div class="row p-5 d-flex background-color-secondary">
+        <div class="col-sm-12 text-start">
+          <p class="display-6">My Projects</p>
+          <a
+            class="project-link"
+            href="https://github.com/tonydail/api-services"
+            target="_blank"
+            >📦 Mono repo - API written with Node.js using the microservices
+            architecture.
+          </a>
+        </div>
+      </div>
+    </div>
     <!-- Link your repositories below -->
-    <a class="project-link" href="https://github.com/tonydail/api-services" target="_blank">📦 Mono repo - API written witn Node.js using the microservices architecture. </a>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

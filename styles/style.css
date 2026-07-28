@@ -1,0 +1,56 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        width: 100%;
+      }
+      h1 {
+        color: #333;
+      }
+      .project-link {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        /* border: 1px solid #ddd; */
+        border-radius: 5px;
+        text-decoration: none;
+        color: #0366d6;
+      }
+      .project-link:hover {
+        background-color: #f6f8fa;
+      }
+
+      .container-fluid {
+        background-color: #f8f9fa;
+        width: 100% !important;
+      }
+
+      .background-color-primary {
+        background-color: #f8f9fa;
+      }
+      .background-color-secondary {
+        background-color: white;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% !important;
+      }
+      .col-md-4, .col-md-8 {
+        width: 100% !important;
+      }
+      .color-primary {
+        color: #007bff;
+      }
+      .color-secondary {
+        color: #6c757d;
+      }
+
+      .profile-image {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        border: 8px solid #007bff;
+      }
