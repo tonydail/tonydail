@@ -1,3 +1,16 @@
+// Add cache buster to CSS files
+function bustCssCache() {
+  const cacheBuster = Date.now().toString();
+  const cssLinks = document.querySelectorAll('link[rel="stylesheet"][href*="style.css"]');
+  
+  cssLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && !href.includes('?')) {
+      link.setAttribute('href', `${href}?v=${cacheBuster}`);
+    }
+  });
+}
+
 async function loadIncludes() {
   const targets = document.querySelectorAll("[data-include]");
   const cacheBuster = Date.now().toString();
@@ -50,6 +63,10 @@ function normalizePath(pathname) {
   return pathname.endsWith("/") ? `${pathname}index.html` : pathname;
 }
 
+// Bust CSS cache first
+bustCssCache();
+
+// Then load includes
 loadIncludes().catch((error) => {
   console.error(error);
 });
