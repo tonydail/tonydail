@@ -46,25 +46,22 @@
               <h3>Microservices</h3>
             </div>
             <div class="portfolio-card-body">
-              <p><strong>Overview:</strong> This microservices project provides an authentication and user management system built with modern event-driven architecture patterns. The services are designed to be <em>forked and tailored</em> for specific use cases, providing a solid foundation for authentication and user profile management that teams can customize to their needs.</p>
-              <p><strong>Solution:</strong> Event-driven microservices platform for authentication and user management built with Node.js/TypeScript. Features transactional outbox pattern with Debezium CDC, hybrid REST/gRPC communication, Kafka event streaming, JWT-based auth, and nginx API gateway. Production-ready architecture with layered design, Dev Container support, and comprehensive testing. Designed to be forked and tailored for specific use cases.</p>
-              <p><strong>Technologies:</strong></p>
-              <div class="tech-tags">
-                <span class="tech-tag">Apache Kafka message broker</span>
-                <span class="tech-tag">RPC</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">Development Containers</span>
-                <span class="tech-tag">Nginx</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Microservices</span>
-                <span class="tech-tag">RESTful APIs</span>
-                <span class="tech-tag">Event-driven Architecture</span>
-                <span class="tech-tag">Debezium CDC </span>
-                <span class="tech-tag">Zod Schemas</span>
-              </div>
+              <p><strong>Overview:</strong> This microservices platform demonstrates event-driven architecture through an authentication and user management system. Built as a showcase of modern distributed systems patterns, it implements enterprise-level practices including transactional outbox with CDC, hybrid communication protocols, and containerized development workflows. The project serves as both a functional system and a reference implementation for teams building scalable microservices architectures.</p>
+              <p><strong>Solution:</strong> Event-driven microservices platform featuring JWT-based authentication and user profile management. Implements transactional outbox pattern with Debezium CDC for guaranteed event delivery, hybrid REST/gRPC communication for optimal performance, and nginx API gateway with JWT validation. Architecture emphasizes strict layered design, idempotent event processing, and zero-downtime operation. Includes comprehensive Dev Container setup for consistent development environments, automated connector registration, and full CI/CD pipelines with unit and integration testing.</p>
+              <p><strong>Technologies</strong></p>
+              <ul>
+              <li><p><strong>Backend:</strong> Node.js, TypeScript, Express.js, gRPC (@grpc/grpc-js)</p></li>
+              <li><p><strong>Database:</strong> PostgreSQL, Prisma ORM</p></li>
+              <li><p><strong>Event Streaming:</strong> Apache Kafka (KRaft mode), Debezium CDC, Kafka Connect</p></li>
+              <li><p><strong>API Gateway:</strong> nginx with JWT validation</p></li>
+              <li><p><strong>Security:</strong> JWT (access + refresh tokens), bcrypt password hashing</p></li>
+              <li><p><strong>Development:</strong> Dev Containers, Docker, Docker Compose</p></li>
+              <li><p><strong>Testing:</strong> Vitest (unit + integration), GitHub Actions CI/CD</p></li>
+              <li><p><strong>Code Quality:</strong> ESLint, Prettier, TypeScript strict mode</p></li>
+              <li><p><strong>Validation:</strong> Zod schemas</p></li>
+              <li><p><strong>Logging:</strong> Pino structured logging</p></li>
+              <li><p><strong>Monitoring:</strong> Kafka UI, CloudBeaver (database UI)</p></li>
+              </ul>
             </div>
             <div class="portfolio-card-footer">
               <a href="https://github.com/tonydail/microservices-ops" target="_blank" class="btn-outline-custom btn-sm">
@@ -72,28 +69,6 @@
               </a>
             </div>
           </div>
-
-          <!-- <div class="portfolio-card">
-            <div class="portfolio-card-header">
-              <i class="fas fa-project-diagram portfolio-icon"></i>
-              <h3>More Projects Coming Soon</h3>
-            </div>
-            <div class="portfolio-card-body">
-              <p>I'm currently building out additional case studies and project showcases. Check back soon or connect with me to discuss my professional experience in:</p>
-              <ul>
-                <li>Enterprise healthcare software modernization</li>
-                <li>Mobile application development (iOS/Android)</li>
-                <li>Microservices architecture and API design</li>
-                <li>Cloud migration and DevOps practices</li>
-                <li>Agile team leadership and process improvement</li>
-              </ul>
-            </div>
-            <div class="portfolio-card-footer">
-              <a href="mailto:tony.dail@gmail.com" class="btn-primary-custom btn-sm">
-                <i class="fas fa-envelope"></i> Discuss My Work
-              </a>
-            </div>
-          </div> -->
         </div>
       </section>
     </main>
