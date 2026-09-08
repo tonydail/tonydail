@@ -7,6 +7,25 @@
     });
   }
 
+  function waitForImages() {
+    const images = Array.from(document.images).filter(
+      (image) => image.loading !== "lazy",
+    );
+
+    return Promise.allSettled(
+      images.map((image) => {
+        if (image.complete) {
+          return image.decode ? image.decode() : Promise.resolve();
+        }
+
+        return new Promise((resolve) => {
+          image.addEventListener("load", resolve, { once: true });
+          image.addEventListener("error", resolve, { once: true });
+        });
+      }),
+    );
+  }
+
   async function revealPage() {
     const contentTasks = [
       window.includesReady,
@@ -14,6 +33,7 @@
     ].filter(Boolean);
 
     await Promise.allSettled(contentTasks);
+    await waitForImages();
 
     if (document.fonts?.ready) {
       await Promise.allSettled([document.fonts.ready]);

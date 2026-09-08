@@ -39,7 +39,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles/style.css?v=3" />
+    <link rel="stylesheet" href="styles/style.css?v=4" />
   </head>
   <body>
     <div id="page-loader" class="page-loader" role="status" aria-live="polite">
@@ -53,7 +53,7 @@
       <section class="hero-section">
         <div class="container px-4">
           <p class="hero-headline color-primary">Charles Dail</p>
-          <p class="hero-subheadline color-secondary">Engineering Leader | Healthcare Tech Innovator</p>
+          <p class="hero-subheadline color-secondary">Principal Software Engineer | Healthcare Tech Innovator</p>
           
           <div class="hero-metrics">
             <span class="hero-metric"><i class="fas fa-clock"></i> 25+ Years Experience</span>
@@ -73,97 +73,116 @@
       <section class="d-flex justify-content-center align-items-center my-5">
         <div class="skills-section">
           <h2 class="text-center mb-4 color-primary">Technical Expertise</h2>
-          
-          <h3 class="skills-category-title">Leadership & Methodology</h3>
-          <div class="skills-container">
-            <div class="skill-card">
-              <i class="fas fa-users-cog" style="color: var(--accent-purple);"></i>
-              <span>Scrum Master</span>
-            </div>
-            <div class="skill-card">
-              <i class="fas fa-project-diagram" style="color: var(--accent-purple);"></i>
-              <span>Agile Leadership</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-atlassian atlassian-icon"></i>
-              <span>Atlassian Suite</span>
-            </div>
-            <div class="skill-card">
-              <i class="fas fa-sitemap" style="color: var(--accent-purple);"></i>
-              <span>Architecture</span>
-            </div>
-          </div>
 
-          <h3 class="skills-category-title">Backend & Database</h3>
-          <div class="skills-container">
-            <div class="skill-card">
-              <i class="fas fa-code" style="color: var(--accent-purple);"></i>
-              <span>.NET / C#</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-node-js node-icon"></i>
-              <span>Node.js</span>
-            </div>
-            <div class="skill-card">
-              <i class="fas fa-database" style="color: var(--primary-blue);"></i>
-              <span>SQL Server</span>
-            </div>
-            <div class="skill-card">
-              <i class="fas fa-database" style="color: var(--primary-blue);"></i>
-              <span>PostgreSQL</span>
-            </div>
-          </div>
+          <div class="expertise-grid">
+            <article class="expertise-card">
+              <h3><i class="fas fa-code" aria-hidden="true"></i> Programming Languages</h3>
+              <ul class="expertise-list">
+                <li>C#</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>SQL</li>
+                <li>Pascal (Delphi)</li>
+              </ul>
+            </article>
 
-          <h3 class="skills-category-title">Frontend</h3>
-          <div class="skills-container">
-            <div class="skill-card">
-              <i class="fa-brands fa-html5 html-icon"></i>
-              <span>HTML5</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-css3-alt css-icon"></i>
-              <span>CSS3</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-js js-icon"></i>
-              <span>JavaScript</span>
-            </div>
-          </div>
+            <article class="expertise-card">
+              <h3><i class="fas fa-sitemap" aria-hidden="true"></i> Backend &amp; Architecture</h3>
+              <ul class="expertise-list">
+                <li>Microservices</li>
+                <li>Apache Kafka</li>
+                <li>Debezium</li>
+                <li>Transactional Outbox Pattern</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>ASP.NET</li>
+                <li>Web API</li>
+                <li>RESTful API Design</li>
+                <li>Orchestration Patterns</li>
+                <li>JWT Authentication</li>
+                <li>OAuth2</li>
+                <li>EHR Web API</li>
+              </ul>
+            </article>
 
-          <h3 class="skills-category-title">Cloud, DevOps & Platforms</h3>
-          <div class="skills-container">
-            <div class="skill-card">
-              <i class="fa-brands fa-docker docker-icon"></i>
-              <span>Docker</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-github github-icon"></i>
-              <span>GitHub</span>
-            </div>
-                        <div class="skill-card">
-              <i class="fas fa-cloud" style="color: var(--secondary-teal);"></i>
-              <span>Azure</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-apple apple-icon"></i>
-              <span>iOS</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-android android-icon"></i>
-              <span>Android</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-apple macos-icon"></i>
-              <span>macOS</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-linux linux-icon"></i>
-              <span>Linux</span>
-            </div>
-            <div class="skill-card">
-              <i class="fa-brands fa-windows windows-icon"></i>
-              <span>Windows</span>
-            </div>
+            <article class="expertise-card">
+              <h3><i class="fas fa-display" aria-hidden="true"></i> Frontend Development</h3>
+              <ul class="expertise-list">
+                <li>Ember.js</li>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>WinForms</li>
+                <li>WPF</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud &amp; DevOps</h3>
+              <ul class="expertise-list">
+                <li>Azure</li>
+                <li>Azure App Services</li>
+                <li>Azure Key Vault</li>
+                <li>Azure Relay</li>
+                <li>Docker</li>
+                <li>Development Containers</li>
+                <li>GitHub</li>
+                <li>Azure DevOps Server</li>
+                <li>CI/CD Pipelines</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <h3><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Tools &amp; Infrastructure</h3>
+              <ul class="expertise-list">
+                <li>Jira</li>
+                <li>Confluence</li>
+                <li>Proxmox VE</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <h3><i class="fas fa-list-check" aria-hidden="true"></i> Methodologies &amp; Software Practice</h3>
+              <ul class="expertise-list">
+                <li>Test-Driven Development (TDD)</li>
+                <li>Agile/Scrum</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <h3><i class="fas fa-laptop" aria-hidden="true"></i> Operating Systems</h3>
+              <ul class="expertise-list">
+                <li>macOS</li>
+                <li>Linux</li>
+                <li>Windows</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <h3><i class="fas fa-people-group" aria-hidden="true"></i> Leadership</h3>
+              <ul class="expertise-list">
+                <li>Servant Leadership</li>
+                <li>Mentoring &amp; Coaching</li>
+                <li>Cross-team Collaboration</li>
+                <li>Team Resilience</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card expertise-card-wide">
+              <h3><i class="fas fa-heart-pulse" aria-hidden="true"></i> Healthcare Technologies</h3>
+              <ul class="expertise-list">
+                <li>CCD/CDA</li>
+                <li>EPCS</li>
+                <li>HIPAA Compliance</li>
+                <li>PHI Protection</li>
+                <li>Clinical Workflows</li>
+                <li>EHR Systems</li>
+                <li>Audit Logging</li>
+                <li>Secure Clinical Data Exchange</li>
+                <li>HL7/FHIR Familiarity</li>
+                <li>Clinical Decision Support (CDS)</li>
+                <li>Azure Key Vault (PHI Security)</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -176,6 +195,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/includes.js"></script>
-    <script src="scripts/page-ready.js?v=2"></script>
+    <script src="scripts/page-ready.js?v=3"></script>
   </body>
 </html>

@@ -5,22 +5,20 @@
     <script src="scripts/page-loader-start.js?v=2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      id="page-description"
       name="description"
-      content="Project details from Charles Dail's software engineering portfolio."
+      content="View and download Charles Dail's professional resume."
     />
     <meta
       name="keywords"
-      content="software project, case study, software architecture, engineering portfolio"
+      content="Charles Dail resume, engineering leader resume, software architect resume"
     />
     <meta name="author" content="Charles Dail" />
 
-    <meta property="og:type" content="article" />
-    <meta id="og-title" property="og:title" content="Project - Charles Dail" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Charles Dail - Resume" />
     <meta
-      id="og-description"
       property="og:description"
-      content="Project details from Charles Dail's software engineering portfolio."
+      content="View Charles Dail's professional engineering resume."
     />
 
     <meta
@@ -29,7 +27,7 @@
     />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Project - Charles Dail | Engineering Leader & Software Architect</title>
+    <title>Resume - Charles Dail | Engineering Leader & Software Architect</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,14 +53,44 @@
     <div data-include="partials/header.html"></div>
     <main class="container-fluid px-1" role="main">
       <section>
-        <a href="projects.html" class="project-back-link">
-          <i class="fas fa-arrow-left" aria-hidden="true"></i>
-          Back to projects
-        </a>
-        <div id="project-status" class="content-status" role="status">
-          Loading project...
+        <h1 class="page-title color-primary">Resume</h1>
+        <p class="page-content">
+          View my professional experience and qualifications below, or open the PDF in a separate tab.
+        </p>
+
+        <div id="resume-status" class="content-status" role="status">
+          Loading resume...
         </div>
-        <article id="project-detail" class="project-detail" hidden></article>
+
+        <div id="resume-viewer" class="resume-viewer" hidden>
+          <div class="resume-actions">
+            <a
+              id="resume-open-link"
+              class="btn-primary-custom"
+              href="assets/charles-dail-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              Open PDF
+            </a>
+            <a
+              id="resume-download-link"
+              class="btn-outline-custom"
+              href="assets/charles-dail-resume.pdf"
+              download
+            >
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download PDF
+            </a>
+          </div>
+
+          <div
+            id="resume-pages"
+            class="resume-pages"
+            aria-label="Charles Dail resume pages"
+          ></div>
+        </div>
       </section>
     </main>
 
@@ -74,9 +102,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/includes.js"></script>
-    <script src="scripts/content-data.js"></script>
-    <script src="scripts/project-data.js"></script>
-    <script src="scripts/project-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="scripts/resume.js?v=3"></script>
     <script src="scripts/page-ready.js?v=3"></script>
   </body>
 </html>
