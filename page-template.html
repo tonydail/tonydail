@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="scripts/page-loader-start.js?v=2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       http-equiv="Cache-Control"
@@ -16,9 +17,15 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css?v=3" />
   </head>
   <body>
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite">
+      <div class="page-loader-dialog">
+        <span class="page-loader-spinner" aria-hidden="true"></span>
+        <span>Loading page...</span>
+      </div>
+    </div>
     <div data-include="partials/header.html"></div>
     <main class="container-fluid px-1">
       <!--Start of page content-->
@@ -41,5 +48,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/includes.js"></script>
+    <script src="scripts/page-ready.js?v=3"></script>
   </body>
 </html>

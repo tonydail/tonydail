@@ -2,20 +2,30 @@
 function bustCssCache() {
   const cacheBuster = Date.now().toString();
   const cssLinks = document.querySelectorAll('link[rel="stylesheet"][href*="style.css"]');
-  
-  cssLinks.forEach((link) => {
+
+  const stylesheetLoads = Array.from(cssLinks).map((link) => {
     const href = link.getAttribute('href');
-    if (href && !href.includes('?')) {
-      link.setAttribute('href', `${href}?v=${cacheBuster}`);
+    if (!href) {
+      return Promise.resolve();
     }
+
+    return new Promise((resolve) => {
+      const stylesheetUrl = new URL(href, window.location.href);
+      stylesheetUrl.searchParams.set("v", cacheBuster);
+      link.addEventListener("load", resolve, { once: true });
+      link.addEventListener("error", resolve, { once: true });
+      link.setAttribute("href", stylesheetUrl.toString());
+    });
   });
+
+  return Promise.all(stylesheetLoads);
 }
 
 async function loadIncludes() {
   const targets = document.querySelectorAll("[data-include]");
   const cacheBuster = Date.now().toString();
 
-  await Promise.all(
+  const includeResults = await Promise.allSettled(
     Array.from(targets).map(async (target) => {
       const url = target.getAttribute("data-include");
       if (!url) return;
@@ -34,6 +44,12 @@ async function loadIncludes() {
     }),
   );
 
+  includeResults.forEach((result) => {
+    if (result.status === "rejected") {
+      console.error(result.reason);
+    }
+  });
+
   setActiveNavLink();
 }
 
@@ -43,7 +59,11 @@ function setActiveNavLink() {
 
   navLinks.forEach((link) => {
     const linkPath = normalizePath(new URL(link.getAttribute("href"), window.location.href).pathname);
-    const isActive = linkPath === currentPath;
+    const isProjectDetail =
+      link.dataset.nav === "portfolio" && currentPath.endsWith("/project.html");
+    const isBlogDetail =
+      link.dataset.nav === "blog" && currentPath.endsWith("/blog-post.html");
+    const isActive = linkPath === currentPath || isProjectDetail || isBlogDetail;
 
     link.classList.toggle("active", isActive);
 
@@ -63,10 +83,5 @@ function normalizePath(pathname) {
   return pathname.endsWith("/") ? `${pathname}index.html` : pathname;
 }
 
-// Bust CSS cache first
-bustCssCache();
-
-// Then load includes
-loadIncludes().catch((error) => {
-  console.error(error);
-});
+// Expose shared layout readiness so the page loader avoids partial rendering.
+window.includesReady = Promise.allSettled([bustCssCache(), loadIncludes()]);
