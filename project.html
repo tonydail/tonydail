@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="scripts/page-loader-start.js?v=2"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      id="page-description"
+      name="description"
+      content="Project details from Charles Dail's software engineering portfolio."
+    />
+    <meta
+      name="keywords"
+      content="software project, case study, software architecture, engineering portfolio"
+    />
+    <meta name="author" content="Charles Dail" />
+
+    <meta property="og:type" content="article" />
+    <meta id="og-title" property="og:title" content="Project - Charles Dail" />
+    <meta
+      id="og-description"
+      property="og:description"
+      content="Project details from Charles Dail's software engineering portfolio."
+    />
+
+    <meta
+      http-equiv="Cache-Control"
+      content="no-store, no-cache, must-revalidate, max-age=0"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Project - Charles Dail | Engineering Leader & Software Architect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css?v=3" />
+  </head>
+  <body>
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite">
+      <div class="page-loader-dialog">
+        <span class="page-loader-spinner" aria-hidden="true"></span>
+        <span>Loading page...</span>
+      </div>
+    </div>
+    <div data-include="partials/header.html"></div>
+    <main class="container-fluid px-1" role="main">
+      <section>
+        <a href="projects.html" class="project-back-link">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          Back to projects
+        </a>
+        <div id="project-status" class="content-status" role="status">
+          Loading project...
+        </div>
+        <article id="project-detail" class="project-detail" hidden></article>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/includes.js"></script>
+    <script src="scripts/content-data.js"></script>
+    <script src="scripts/project-data.js"></script>
+    <script src="scripts/project-detail.js"></script>
+    <script src="scripts/page-ready.js?v=2"></script>
+  </body>
+</html>

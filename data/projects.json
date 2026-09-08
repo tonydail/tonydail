@@ -1,0 +1,37 @@
+[
+  {
+    "id": "microservices",
+    "title": "Microservices",
+    "summary": "An event-driven authentication and user-management platform demonstrating reliable messaging, layered architecture, and containerized development workflows.",
+    "description": [
+      "This microservices platform demonstrates event-driven architecture through an authentication and user management system. Built as a showcase of modern distributed systems patterns, it implements enterprise-level practices including transactional outbox with change data capture, hybrid communication protocols, and containerized development workflows.",
+      "The solution uses JWT-based authentication and user profile management, Debezium CDC for guaranteed event delivery, REST and gRPC communication, and an nginx API gateway with JWT validation. Its architecture emphasizes strict layers, idempotent event processing, consistent development environments, and automated CI/CD."
+    ],
+    "technologies": [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "gRPC",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Apache Kafka",
+      "Debezium CDC",
+      "nginx",
+      "JWT",
+      "Docker",
+      "Vitest",
+      "GitHub Actions",
+      "Zod",
+      "Pino"
+    ],
+    "repositoryUrl": "https://github.com/tonydail/microservices-ops",
+    "demoUrl": null,
+    "images": [],
+    "highlights": [
+      "Implements the transactional outbox pattern with change data capture for reliable event delivery.",
+      "Uses REST for external APIs and gRPC for efficient service-to-service communication.",
+      "Provides a complete Dev Container and Docker Compose workflow for consistent local development.",
+      "Includes unit and integration testing with automated GitHub Actions pipelines."
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "designing-reliable-event-driven-microservices",
+    "title": "Designing Reliable Event-Driven Microservices",
+    "summary": "A practical look at the architecture decisions that make event-driven services dependable, testable, and easier for teams to operate.",
+    "publishedDate": "2026-09-08",
+    "author": "Charles Dail",
+    "tags": [
+      "Microservices",
+      "Architecture",
+      "Kafka",
+      "DevOps"
+    ],
+    "sections": [
+      {
+        "heading": "Reliability starts at the data boundary",
+        "paragraphs": [
+          "Publishing an event after a database update sounds simple until one operation succeeds and the other fails. The transactional outbox pattern addresses that gap by writing the business change and its outgoing event in the same database transaction.",
+          "A change data capture process can then publish committed outbox records to the event stream. This keeps message delivery tied to durable application state instead of relying on a fragile sequence of separate network calls."
+        ]
+      },
+      {
+        "heading": "Design consumers for repeated delivery",
+        "paragraphs": [
+          "Reliable delivery does not mean every message will arrive exactly once. Consumers should expect retries and duplicate events, then use stable event identifiers and persisted processing records to make repeated delivery harmless.",
+          "Idempotent handlers also make operational recovery safer. Teams can replay messages or restart consumers without creating duplicate business effects."
+        ]
+      },
+      {
+        "heading": "Choose communication styles intentionally",
+        "paragraphs": [
+          "External clients often benefit from familiar REST APIs, while internal services may use gRPC for strongly typed, efficient request-response communication. Events are most useful when services need to react independently without creating a synchronous dependency chain.",
+          "Using more than one protocol is worthwhile only when each one has a clear role. Consistent boundaries, shared contracts, and observable failure behavior matter more than adopting a protocol everywhere."
+        ]
+      },
+      {
+        "heading": "Make the development environment part of the architecture",
+        "paragraphs": [
+          "A distributed system is difficult to understand when every developer assembles it differently. Dev Containers and Docker Compose can turn infrastructure, service dependencies, connector registration, and supporting tools into a repeatable workflow.",
+          "That repeatability shortens onboarding, makes integration tests more trustworthy, and gives the team a shared environment for diagnosing behavior before changes reach production."
+        ]
+      }
+    ]
+  }
+]
